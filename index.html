@@ -11,12 +11,12 @@
 <body>
   <div class="calendar">
     <div class="header">
-      <button class="btn">Today</button>
+      <button class="btn" data-date-today-btn>Today</button>
       <div>
-        <button class="month-change-btn">&lt;</button>
-        <button class="month-change-btn">&gt;</button>
+        <button class="month-change-btn" data-date-prev-btn>&lt;</button>
+        <button class="month-change-btn" data-date-next-btn>&gt;</button>
       </div>
-      <span class="month-title">April 2021</span>
+      <span class="month-title" data-date-title></span>
     </div>
     <div class="days" data-day-container>
       <div class="day non-month-day">
@@ -305,9 +305,9 @@
     </div>
   </div>
 
-  <div class="modal">
-    <div class="overlay"></div>
-    <div class="modal-body"></div>
+  <div class="modal" data-modal>
+    <div class="overlay" data-overlay></div>
+    <div class="modal-body" data-modal-body></div>
   </div>
 
   <template id="view-all-events-template">
@@ -382,9 +382,9 @@
   <template id="day-template">
     <div class="day" data-day-wrapper>
       <div class="day-header">
-        <div class="week-name">Thu</div>
-        <div class="day-number" data-day-number>9</div>
-        <button class="add-event-btn">+</button>
+        <div class="week-name" data-week-name></div>
+        <div class="day-number" data-day-number></div>
+        <button class="add-event-btn" data-add-event-btn>+</button>
       </div>
       <div class="events">
         <button class="all-day-event green event">
