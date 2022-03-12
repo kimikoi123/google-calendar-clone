@@ -339,26 +339,26 @@
 
   <template id="event-form-template">
     <div class="modal-title">
-      <div>Add/Edit Event</div>
-      <small>4/8/21</small>
+      <div data-event-title></div>
+      <small data-date></small>
     </div>
     <form>
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
+        <label for="name" >Name</label>
+        <input type="text" name="name" id="name" data-name required>
       </div>
       <div class="form-group checkbox">
-        <input type="checkbox" name="all-day" id="all-day">
-        <label for="all-day">All Day?</label>
+        <input type="checkbox" name="all-day" id="all-day" data-all-day>
+        <label for="all-day" >All Day?</label>
       </div>
       <div class="row">
         <div class="form-group">
           <label for="start-time">Start Time</label>
-          <input type="time" name="start-time" id="start-time">
+          <input type="time" name="start-time" id="start-time" data-start-time>
         </div>
         <div class="form-group">
           <label for="end-time">End Time</label>
-          <input type="time" name="end-time" id="end-time">
+          <input type="time" name="end-time" id="end-time" data-end-time>
         </div>
       </div>
       <div class="form-group">
@@ -373,8 +373,8 @@
         </div>
       </div>
       <div class="row">
-        <button class="btn btn-success" type="submit">Add/Save</button>
-        <button class="btn btn-delete" type="button">Delete</button>
+        <button class="btn btn-success" type="submit" data-save-btn></button>
+        <button class="btn btn-delete" type="button" data-delete-btn></button>
       </div>
     </form>
   </template>
