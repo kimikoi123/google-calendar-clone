@@ -1,5 +1,5 @@
 import { format } from "date-fns"
-import { openModal } from './modal'
+import { addEventModal } from './modal'
 
 const dayTemplate = document.getElementById("day-template")
 export default function createDayElement(date, options = {}) {
@@ -25,7 +25,7 @@ export default function createDayElement(date, options = {}) {
   }
 
   addEventBtn.addEventListener('click', () => {
-      openModal(date)
+      addEventModal(date)
   })
 
   return dayElement
